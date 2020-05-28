@@ -4,7 +4,7 @@
 @Autor: 吴宇辉
 @Date: 2020-05-25 22:29:47
 @LastEditors: 吴宇辉
-@LastEditTime: 2020-05-28 00:22:14
+@LastEditTime: 2020-05-28 10:58:41
 '''
 
 import torch.nn.functional as F
@@ -75,17 +75,56 @@ def main():
 
     classes = ('normal', 'bacteria', 'virus')
 
-    # get some random training images
-    dataiter = iter(train_loader)
-    images, labels = dataiter.next()
+    # # get some random training images
+    # dataiter = iter(train_loader)
+    # images, labels = dataiter.next()
 
-    # show images
-    utils.imshow(torchvision.utils.make_grid(images))
-    #print labels
-    print(' '.join('%5s' % classes[labels[j]] for j in range(4) ))
+    # # show images
+    # utils.imshow(torchvision.utils.make_grid(images))
+    # #print labels
+    # print(' '.join('%5s' % classes[labels[j]] for j in range(4) ))
 
-    x, y = next(iter(train_loader))
-    print(x.shape, y.shape, x.min(), y.min())
+    # x, y = next(iter(train_loader))
+    # print(x.shape, y.shape, x.min(), y.min())
+
+    net = torchvision.models.inception_v3(pretrained=True)
+
+    criterion = nn.CrossEntropyLoss()  #交叉熵损失函数
+    optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
+
+    for epoch in range(1):
+        running_loss = 0.0
+        for i, data in enumerate(train_loader, 0):
+            #输入数据
+            #读取数据的数据内容和标签
+            inputs, labels = data 
+            inputs, labels = Variable(inputs), Variable(labels)
+
+            #梯度清零，也就是把loss关于weight的导数变成0
+            optimizer.zero_grad()
+
+            #forward + backward
+            #得到网络的输出
+            outputs = net(inputs)
+
+            #计算损失值，将输出的outputs和原来导入的labels作为loss函数的输入就可以得到损失了：
+            loss = criterion(outputs, labels)  #output 和 labels的交叉熵损失
+            #计算得到的loss后就要回转损失
+            loss.backward()
+            #loss.backward()，有时候，我们并不想所有variable的梯度。那就要
+            #可以通过vatiable的两个参数
+            #更新参数
+            #回传损失过程会计算梯度，然后需要更具这些梯度更新参数，oprimizer.step()就是用来更新参数的。
+            # oprimizer.step()后，你就可以从optimizer.param_groups[0]['params']里面看到各个层的地图和权值信息
+            optimizer.step()    #利用计算的得到的梯度对参数进行更新
+
+            #打印log信息
+            running_loss += loss.item()     #用于从tensor中获取python数字
+            if 1 % 2000 == 1999:    #每2000个batch打印一次训练状态
+                print('[%d, %5d] loss: %.3f' % (epoch, i+1, running_loss /2000))
+
+                running_loss = 0.0
+    print('Finished Training')
 
 if __name__ == "__main__":
     main()

@@ -4,7 +4,7 @@
 @Autor: 吴宇辉
 @Date: 2020-05-25 22:29:47
 @LastEditors: 吴宇辉
-@LastEditTime: 2020-05-28 10:58:41
+@LastEditTime: 2020-05-28 11:41:50
 '''
 
 import torch.nn.functional as F
@@ -90,22 +90,27 @@ def main():
     net = torchvision.models.inception_v3(pretrained=True)
 
     criterion = nn.CrossEntropyLoss()  #交叉熵损失函数
-    optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
+    optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9) 
 
     for epoch in range(1):
         running_loss = 0.0
         for i, data in enumerate(train_loader, 0):
+            print(data)
             #输入数据
             #读取数据的数据内容和标签
             inputs, labels = data 
+            print(inputs)
+            print(labels)
             inputs, labels = Variable(inputs), Variable(labels)
+            print(inputs)
+            print(labels)
 
             #梯度清零，也就是把loss关于weight的导数变成0
-            optimizer.zero_grad()
+            optimizer.zero_grad() 
 
             #forward + backward
             #得到网络的输出
-            outputs = net(inputs)
+            outputs = net(inputs) 
 
             #计算损失值，将输出的outputs和原来导入的labels作为loss函数的输入就可以得到损失了：
             loss = criterion(outputs, labels)  #output 和 labels的交叉熵损失
@@ -120,7 +125,7 @@ def main():
 
             #打印log信息
             running_loss += loss.item()     #用于从tensor中获取python数字
-            if 1 % 2000 == 1999:    #每2000个batch打印一次训练状态
+            if i % 2000 == 1999:    #每2000个batch打印一次训练状态
                 print('[%d, %5d] loss: %.3f' % (epoch, i+1, running_loss /2000))
 
                 running_loss = 0.0

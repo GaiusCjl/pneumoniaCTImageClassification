@@ -22,8 +22,8 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # Top level data directory. Here we assume the format of the directory conforms
 #   to the ImageFolder structure
 # 云端文件路径
-# data_dir = "/content/drive/My Drive/modelTestUploadGoogle/chest_xray"
-data_dir = "./chest_xray"
+data_dir = "/content/drive/My Drive/modelTestUploadGoogle/chest_xray"
+# data_dir = "./chest_xray"
 
 # Models to choose from [resnet, alexnet, vgg, squeezenet, densenet, inception]
 model_name = "inception"
@@ -32,14 +32,14 @@ model_name = "inception"
 num_classes = 3
 
 # Batch size for training (change depending on how much memory you have)
-batch_size = 8
+batch_size = 15
 
 # Number of epochs to train for
-num_epochs = 15
+num_epochs = 50
 
 # Flag for feature extracting. When False, we finetune the whole model,
 #   when True we only update the reshaped layer params
-feature_extract = True
+feature_extract = False 
 
 def train_model(model, dataloaders, criterion, optimizer, num_epochs=25, is_inception=False):
     since = time.time()
@@ -253,7 +253,7 @@ if __name__ == '__main__':
                 print("\t",name)
     
     # Observe that all parameters are being optimized
-    optimizer_ft = optim.SGD(params_to_update, lr=0.001, momentum=0.9)
+    optimizer_ft = optim.SGD(params_to_update, lr=0.0001, momentum=0.9)
     
     # Setup the loss fxn
     criterion = nn.CrossEntropyLoss()

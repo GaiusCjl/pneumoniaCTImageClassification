@@ -1,0 +1,13 @@
+# Models to choose from [resnet, alexnet, vgg, squeezenet, densenet, inception]
+model_name = "inception"
+
+# Number of classes in the dataset
+num_classes = 3
+
+# Batch size for training (change depending on how much memory you have)
+batch_size = 16
+
+# Number of epochs to train for
+num_epochs = 150
+
+optimizer_ft = optim.Adam(params_to_update, lr=0.001, betas=(0.9, 0.999), eps=1e-08, weight_decay=0)

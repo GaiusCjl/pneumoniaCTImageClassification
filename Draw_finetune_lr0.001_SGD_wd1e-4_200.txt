@@ -1,0 +1,1216 @@
+PyTorch Version:  1.5.0+cu101
+Torchvision Version:  0.6.0+cu101
+Downloading: "https://download.pytorch.org/models/inception_v3_google-1a9a5a14.pth" to /root/.cache/torch/checkpoints/inception_v3_google-1a9a5a14.pth
+100%
+104M/104M [00:10<00:00, 10.4MB/s]
+
+load  /content/drive/My Drive/modelTestUploadGoogle/models/inception_SGD_bs16_ep100.pkl  model parameters.
+
+Inception3(
+  (Conv2d_1a_3x3): BasicConv2d(
+    (conv): Conv2d(3, 32, kernel_size=(3, 3), stride=(2, 2), bias=False)
+    (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Conv2d_2a_3x3): BasicConv2d(
+    (conv): Conv2d(32, 32, kernel_size=(3, 3), stride=(1, 1), bias=False)
+    (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Conv2d_2b_3x3): BasicConv2d(
+    (conv): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+    (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Conv2d_3b_1x1): BasicConv2d(
+    (conv): Conv2d(64, 80, kernel_size=(1, 1), stride=(1, 1), bias=False)
+    (bn): BatchNorm2d(80, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Conv2d_4a_3x3): BasicConv2d(
+    (conv): Conv2d(80, 192, kernel_size=(3, 3), stride=(1, 1), bias=False)
+    (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+  )
+  (Mixed_5b): InceptionA(
+    (branch1x1): BasicConv2d(
+      (conv): Conv2d(192, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch5x5_1): BasicConv2d(
+      (conv): Conv2d(192, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(48, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch5x5_2): BasicConv2d(
+      (conv): Conv2d(48, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_1): BasicConv2d(
+      (conv): Conv2d(192, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_2): BasicConv2d(
+      (conv): Conv2d(64, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(96, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_3): BasicConv2d(
+      (conv): Conv2d(96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(96, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch_pool): BasicConv2d(
+      (conv): Conv2d(192, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(32, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (Mixed_5c): InceptionA(
+    (branch1x1): BasicConv2d(
+      (conv): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch5x5_1): BasicConv2d(
+      (conv): Conv2d(256, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(48, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch5x5_2): BasicConv2d(
+      (conv): Conv2d(48, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_1): BasicConv2d(
+      (conv): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_2): BasicConv2d(
+      (conv): Conv2d(64, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(96, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_3): BasicConv2d(
+      (conv): Conv2d(96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(96, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch_pool): BasicConv2d(
+      (conv): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (Mixed_5d): InceptionA(
+    (branch1x1): BasicConv2d(
+      (conv): Conv2d(288, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch5x5_1): BasicConv2d(
+      (conv): Conv2d(288, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(48, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch5x5_2): BasicConv2d(
+      (conv): Conv2d(48, 64, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_1): BasicConv2d(
+      (conv): Conv2d(288, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_2): BasicConv2d(
+      (conv): Conv2d(64, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(96, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_3): BasicConv2d(
+      (conv): Conv2d(96, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(96, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch_pool): BasicConv2d(
+      (conv): Conv2d(288, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (Mixed_6a): InceptionB(
+    (branch3x3): BasicConv2d(
+      (conv): Conv2d(288, 384, kernel_size=(3, 3), stride=(2, 2), bias=False)
+      (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_1): BasicConv2d(
+      (conv): Conv2d(288, 64, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(64, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_2): BasicConv2d(
+      (conv): Conv2d(64, 96, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(96, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_3): BasicConv2d(
+      (conv): Conv2d(96, 96, kernel_size=(3, 3), stride=(2, 2), bias=False)
+      (bn): BatchNorm2d(96, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (Mixed_6b): InceptionC(
+    (branch1x1): BasicConv2d(
+      (conv): Conv2d(768, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7_1): BasicConv2d(
+      (conv): Conv2d(768, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7_2): BasicConv2d(
+      (conv): Conv2d(128, 128, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7_3): BasicConv2d(
+      (conv): Conv2d(128, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_1): BasicConv2d(
+      (conv): Conv2d(768, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_2): BasicConv2d(
+      (conv): Conv2d(128, 128, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_3): BasicConv2d(
+      (conv): Conv2d(128, 128, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_4): BasicConv2d(
+      (conv): Conv2d(128, 128, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_5): BasicConv2d(
+      (conv): Conv2d(128, 192, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch_pool): BasicConv2d(
+      (conv): Conv2d(768, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (Mixed_6c): InceptionC(
+    (branch1x1): BasicConv2d(
+      (conv): Conv2d(768, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7_1): BasicConv2d(
+      (conv): Conv2d(768, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7_2): BasicConv2d(
+      (conv): Conv2d(160, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+      (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7_3): BasicConv2d(
+      (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_1): BasicConv2d(
+      (conv): Conv2d(768, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_2): BasicConv2d(
+      (conv): Conv2d(160, 160, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+      (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_3): BasicConv2d(
+      (conv): Conv2d(160, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+      (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_4): BasicConv2d(
+      (conv): Conv2d(160, 160, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+      (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_5): BasicConv2d(
+      (conv): Conv2d(160, 192, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch_pool): BasicConv2d(
+      (conv): Conv2d(768, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (Mixed_6d): InceptionC(
+    (branch1x1): BasicConv2d(
+      (conv): Conv2d(768, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7_1): BasicConv2d(
+      (conv): Conv2d(768, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7_2): BasicConv2d(
+      (conv): Conv2d(160, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+      (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7_3): BasicConv2d(
+      (conv): Conv2d(160, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_1): BasicConv2d(
+      (conv): Conv2d(768, 160, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_2): BasicConv2d(
+      (conv): Conv2d(160, 160, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+      (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_3): BasicConv2d(
+      (conv): Conv2d(160, 160, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+      (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_4): BasicConv2d(
+      (conv): Conv2d(160, 160, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+      (bn): BatchNorm2d(160, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_5): BasicConv2d(
+      (conv): Conv2d(160, 192, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch_pool): BasicConv2d(
+      (conv): Conv2d(768, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (Mixed_6e): InceptionC(
+    (branch1x1): BasicConv2d(
+      (conv): Conv2d(768, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7_1): BasicConv2d(
+      (conv): Conv2d(768, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7_2): BasicConv2d(
+      (conv): Conv2d(192, 192, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7_3): BasicConv2d(
+      (conv): Conv2d(192, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_1): BasicConv2d(
+      (conv): Conv2d(768, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_2): BasicConv2d(
+      (conv): Conv2d(192, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_3): BasicConv2d(
+      (conv): Conv2d(192, 192, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_4): BasicConv2d(
+      (conv): Conv2d(192, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7dbl_5): BasicConv2d(
+      (conv): Conv2d(192, 192, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch_pool): BasicConv2d(
+      (conv): Conv2d(768, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (AuxLogits): InceptionAux(
+    (conv0): BasicConv2d(
+      (conv): Conv2d(768, 128, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(128, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (conv1): BasicConv2d(
+      (conv): Conv2d(128, 768, kernel_size=(5, 5), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(768, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (fc): Linear(in_features=768, out_features=3, bias=True)
+  )
+  (Mixed_7a): InceptionD(
+    (branch3x3_1): BasicConv2d(
+      (conv): Conv2d(768, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3_2): BasicConv2d(
+      (conv): Conv2d(192, 320, kernel_size=(3, 3), stride=(2, 2), bias=False)
+      (bn): BatchNorm2d(320, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7x3_1): BasicConv2d(
+      (conv): Conv2d(768, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7x3_2): BasicConv2d(
+      (conv): Conv2d(192, 192, kernel_size=(1, 7), stride=(1, 1), padding=(0, 3), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7x3_3): BasicConv2d(
+      (conv): Conv2d(192, 192, kernel_size=(7, 1), stride=(1, 1), padding=(3, 0), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch7x7x3_4): BasicConv2d(
+      (conv): Conv2d(192, 192, kernel_size=(3, 3), stride=(2, 2), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (Mixed_7b): InceptionE(
+    (branch1x1): BasicConv2d(
+      (conv): Conv2d(1280, 320, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(320, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3_1): BasicConv2d(
+      (conv): Conv2d(1280, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3_2a): BasicConv2d(
+      (conv): Conv2d(384, 384, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1), bias=False)
+      (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3_2b): BasicConv2d(
+      (conv): Conv2d(384, 384, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0), bias=False)
+      (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_1): BasicConv2d(
+      (conv): Conv2d(1280, 448, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(448, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_2): BasicConv2d(
+      (conv): Conv2d(448, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_3a): BasicConv2d(
+      (conv): Conv2d(384, 384, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1), bias=False)
+      (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_3b): BasicConv2d(
+      (conv): Conv2d(384, 384, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0), bias=False)
+      (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch_pool): BasicConv2d(
+      (conv): Conv2d(1280, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (Mixed_7c): InceptionE(
+    (branch1x1): BasicConv2d(
+      (conv): Conv2d(2048, 320, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(320, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3_1): BasicConv2d(
+      (conv): Conv2d(2048, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3_2a): BasicConv2d(
+      (conv): Conv2d(384, 384, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1), bias=False)
+      (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3_2b): BasicConv2d(
+      (conv): Conv2d(384, 384, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0), bias=False)
+      (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_1): BasicConv2d(
+      (conv): Conv2d(2048, 448, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(448, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_2): BasicConv2d(
+      (conv): Conv2d(448, 384, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_3a): BasicConv2d(
+      (conv): Conv2d(384, 384, kernel_size=(1, 3), stride=(1, 1), padding=(0, 1), bias=False)
+      (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch3x3dbl_3b): BasicConv2d(
+      (conv): Conv2d(384, 384, kernel_size=(3, 1), stride=(1, 1), padding=(1, 0), bias=False)
+      (bn): BatchNorm2d(384, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+    (branch_pool): BasicConv2d(
+      (conv): Conv2d(2048, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+      (bn): BatchNorm2d(192, eps=0.001, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (fc): Linear(in_features=2048, out_features=3, bias=True)
+)
+Initializing Datasets and Dataloaders...
+Params to learn:
+	 Conv2d_1a_3x3.conv.weight
+	 Conv2d_1a_3x3.bn.weight
+	 Conv2d_1a_3x3.bn.bias
+	 Conv2d_2a_3x3.conv.weight
+	 Conv2d_2a_3x3.bn.weight
+	 Conv2d_2a_3x3.bn.bias
+	 Conv2d_2b_3x3.conv.weight
+	 Conv2d_2b_3x3.bn.weight
+	 Conv2d_2b_3x3.bn.bias
+	 Conv2d_3b_1x1.conv.weight
+	 Conv2d_3b_1x1.bn.weight
+	 Conv2d_3b_1x1.bn.bias
+	 Conv2d_4a_3x3.conv.weight
+	 Conv2d_4a_3x3.bn.weight
+	 Conv2d_4a_3x3.bn.bias
+	 Mixed_5b.branch1x1.conv.weight
+	 Mixed_5b.branch1x1.bn.weight
+	 Mixed_5b.branch1x1.bn.bias
+	 Mixed_5b.branch5x5_1.conv.weight
+	 Mixed_5b.branch5x5_1.bn.weight
+	 Mixed_5b.branch5x5_1.bn.bias
+	 Mixed_5b.branch5x5_2.conv.weight
+	 Mixed_5b.branch5x5_2.bn.weight
+	 Mixed_5b.branch5x5_2.bn.bias
+	 Mixed_5b.branch3x3dbl_1.conv.weight
+	 Mixed_5b.branch3x3dbl_1.bn.weight
+	 Mixed_5b.branch3x3dbl_1.bn.bias
+	 Mixed_5b.branch3x3dbl_2.conv.weight
+	 Mixed_5b.branch3x3dbl_2.bn.weight
+	 Mixed_5b.branch3x3dbl_2.bn.bias
+	 Mixed_5b.branch3x3dbl_3.conv.weight
+	 Mixed_5b.branch3x3dbl_3.bn.weight
+	 Mixed_5b.branch3x3dbl_3.bn.bias
+	 Mixed_5b.branch_pool.conv.weight
+	 Mixed_5b.branch_pool.bn.weight
+	 Mixed_5b.branch_pool.bn.bias
+	 Mixed_5c.branch1x1.conv.weight
+	 Mixed_5c.branch1x1.bn.weight
+	 Mixed_5c.branch1x1.bn.bias
+	 Mixed_5c.branch5x5_1.conv.weight
+	 Mixed_5c.branch5x5_1.bn.weight
+	 Mixed_5c.branch5x5_1.bn.bias
+	 Mixed_5c.branch5x5_2.conv.weight
+	 Mixed_5c.branch5x5_2.bn.weight
+	 Mixed_5c.branch5x5_2.bn.bias
+	 Mixed_5c.branch3x3dbl_1.conv.weight
+	 Mixed_5c.branch3x3dbl_1.bn.weight
+	 Mixed_5c.branch3x3dbl_1.bn.bias
+	 Mixed_5c.branch3x3dbl_2.conv.weight
+	 Mixed_5c.branch3x3dbl_2.bn.weight
+	 Mixed_5c.branch3x3dbl_2.bn.bias
+	 Mixed_5c.branch3x3dbl_3.conv.weight
+	 Mixed_5c.branch3x3dbl_3.bn.weight
+	 Mixed_5c.branch3x3dbl_3.bn.bias
+	 Mixed_5c.branch_pool.conv.weight
+	 Mixed_5c.branch_pool.bn.weight
+	 Mixed_5c.branch_pool.bn.bias
+	 Mixed_5d.branch1x1.conv.weight
+	 Mixed_5d.branch1x1.bn.weight
+	 Mixed_5d.branch1x1.bn.bias
+	 Mixed_5d.branch5x5_1.conv.weight
+	 Mixed_5d.branch5x5_1.bn.weight
+	 Mixed_5d.branch5x5_1.bn.bias
+	 Mixed_5d.branch5x5_2.conv.weight
+	 Mixed_5d.branch5x5_2.bn.weight
+	 Mixed_5d.branch5x5_2.bn.bias
+	 Mixed_5d.branch3x3dbl_1.conv.weight
+	 Mixed_5d.branch3x3dbl_1.bn.weight
+	 Mixed_5d.branch3x3dbl_1.bn.bias
+	 Mixed_5d.branch3x3dbl_2.conv.weight
+	 Mixed_5d.branch3x3dbl_2.bn.weight
+	 Mixed_5d.branch3x3dbl_2.bn.bias
+	 Mixed_5d.branch3x3dbl_3.conv.weight
+	 Mixed_5d.branch3x3dbl_3.bn.weight
+	 Mixed_5d.branch3x3dbl_3.bn.bias
+	 Mixed_5d.branch_pool.conv.weight
+	 Mixed_5d.branch_pool.bn.weight
+	 Mixed_5d.branch_pool.bn.bias
+	 Mixed_6a.branch3x3.conv.weight
+	 Mixed_6a.branch3x3.bn.weight
+	 Mixed_6a.branch3x3.bn.bias
+	 Mixed_6a.branch3x3dbl_1.conv.weight
+	 Mixed_6a.branch3x3dbl_1.bn.weight
+	 Mixed_6a.branch3x3dbl_1.bn.bias
+	 Mixed_6a.branch3x3dbl_2.conv.weight
+	 Mixed_6a.branch3x3dbl_2.bn.weight
+	 Mixed_6a.branch3x3dbl_2.bn.bias
+	 Mixed_6a.branch3x3dbl_3.conv.weight
+	 Mixed_6a.branch3x3dbl_3.bn.weight
+	 Mixed_6a.branch3x3dbl_3.bn.bias
+	 Mixed_6b.branch1x1.conv.weight
+	 Mixed_6b.branch1x1.bn.weight
+	 Mixed_6b.branch1x1.bn.bias
+	 Mixed_6b.branch7x7_1.conv.weight
+	 Mixed_6b.branch7x7_1.bn.weight
+	 Mixed_6b.branch7x7_1.bn.bias
+	 Mixed_6b.branch7x7_2.conv.weight
+	 Mixed_6b.branch7x7_2.bn.weight
+	 Mixed_6b.branch7x7_2.bn.bias
+	 Mixed_6b.branch7x7_3.conv.weight
+	 Mixed_6b.branch7x7_3.bn.weight
+	 Mixed_6b.branch7x7_3.bn.bias
+	 Mixed_6b.branch7x7dbl_1.conv.weight
+	 Mixed_6b.branch7x7dbl_1.bn.weight
+	 Mixed_6b.branch7x7dbl_1.bn.bias
+	 Mixed_6b.branch7x7dbl_2.conv.weight
+	 Mixed_6b.branch7x7dbl_2.bn.weight
+	 Mixed_6b.branch7x7dbl_2.bn.bias
+	 Mixed_6b.branch7x7dbl_3.conv.weight
+	 Mixed_6b.branch7x7dbl_3.bn.weight
+	 Mixed_6b.branch7x7dbl_3.bn.bias
+	 Mixed_6b.branch7x7dbl_4.conv.weight
+	 Mixed_6b.branch7x7dbl_4.bn.weight
+	 Mixed_6b.branch7x7dbl_4.bn.bias
+	 Mixed_6b.branch7x7dbl_5.conv.weight
+	 Mixed_6b.branch7x7dbl_5.bn.weight
+	 Mixed_6b.branch7x7dbl_5.bn.bias
+	 Mixed_6b.branch_pool.conv.weight
+	 Mixed_6b.branch_pool.bn.weight
+	 Mixed_6b.branch_pool.bn.bias
+	 Mixed_6c.branch1x1.conv.weight
+	 Mixed_6c.branch1x1.bn.weight
+	 Mixed_6c.branch1x1.bn.bias
+	 Mixed_6c.branch7x7_1.conv.weight
+	 Mixed_6c.branch7x7_1.bn.weight
+	 Mixed_6c.branch7x7_1.bn.bias
+	 Mixed_6c.branch7x7_2.conv.weight
+	 Mixed_6c.branch7x7_2.bn.weight
+	 Mixed_6c.branch7x7_2.bn.bias
+	 Mixed_6c.branch7x7_3.conv.weight
+	 Mixed_6c.branch7x7_3.bn.weight
+	 Mixed_6c.branch7x7_3.bn.bias
+	 Mixed_6c.branch7x7dbl_1.conv.weight
+	 Mixed_6c.branch7x7dbl_1.bn.weight
+	 Mixed_6c.branch7x7dbl_1.bn.bias
+	 Mixed_6c.branch7x7dbl_2.conv.weight
+	 Mixed_6c.branch7x7dbl_2.bn.weight
+	 Mixed_6c.branch7x7dbl_2.bn.bias
+	 Mixed_6c.branch7x7dbl_3.conv.weight
+	 Mixed_6c.branch7x7dbl_3.bn.weight
+	 Mixed_6c.branch7x7dbl_3.bn.bias
+	 Mixed_6c.branch7x7dbl_4.conv.weight
+	 Mixed_6c.branch7x7dbl_4.bn.weight
+	 Mixed_6c.branch7x7dbl_4.bn.bias
+	 Mixed_6c.branch7x7dbl_5.conv.weight
+	 Mixed_6c.branch7x7dbl_5.bn.weight
+	 Mixed_6c.branch7x7dbl_5.bn.bias
+	 Mixed_6c.branch_pool.conv.weight
+	 Mixed_6c.branch_pool.bn.weight
+	 Mixed_6c.branch_pool.bn.bias
+	 Mixed_6d.branch1x1.conv.weight
+	 Mixed_6d.branch1x1.bn.weight
+	 Mixed_6d.branch1x1.bn.bias
+	 Mixed_6d.branch7x7_1.conv.weight
+	 Mixed_6d.branch7x7_1.bn.weight
+	 Mixed_6d.branch7x7_1.bn.bias
+	 Mixed_6d.branch7x7_2.conv.weight
+	 Mixed_6d.branch7x7_2.bn.weight
+	 Mixed_6d.branch7x7_2.bn.bias
+	 Mixed_6d.branch7x7_3.conv.weight
+	 Mixed_6d.branch7x7_3.bn.weight
+	 Mixed_6d.branch7x7_3.bn.bias
+	 Mixed_6d.branch7x7dbl_1.conv.weight
+	 Mixed_6d.branch7x7dbl_1.bn.weight
+	 Mixed_6d.branch7x7dbl_1.bn.bias
+	 Mixed_6d.branch7x7dbl_2.conv.weight
+	 Mixed_6d.branch7x7dbl_2.bn.weight
+	 Mixed_6d.branch7x7dbl_2.bn.bias
+	 Mixed_6d.branch7x7dbl_3.conv.weight
+	 Mixed_6d.branch7x7dbl_3.bn.weight
+	 Mixed_6d.branch7x7dbl_3.bn.bias
+	 Mixed_6d.branch7x7dbl_4.conv.weight
+	 Mixed_6d.branch7x7dbl_4.bn.weight
+	 Mixed_6d.branch7x7dbl_4.bn.bias
+	 Mixed_6d.branch7x7dbl_5.conv.weight
+	 Mixed_6d.branch7x7dbl_5.bn.weight
+	 Mixed_6d.branch7x7dbl_5.bn.bias
+	 Mixed_6d.branch_pool.conv.weight
+	 Mixed_6d.branch_pool.bn.weight
+	 Mixed_6d.branch_pool.bn.bias
+	 Mixed_6e.branch1x1.conv.weight
+	 Mixed_6e.branch1x1.bn.weight
+	 Mixed_6e.branch1x1.bn.bias
+	 Mixed_6e.branch7x7_1.conv.weight
+	 Mixed_6e.branch7x7_1.bn.weight
+	 Mixed_6e.branch7x7_1.bn.bias
+	 Mixed_6e.branch7x7_2.conv.weight
+	 Mixed_6e.branch7x7_2.bn.weight
+	 Mixed_6e.branch7x7_2.bn.bias
+	 Mixed_6e.branch7x7_3.conv.weight
+	 Mixed_6e.branch7x7_3.bn.weight
+	 Mixed_6e.branch7x7_3.bn.bias
+	 Mixed_6e.branch7x7dbl_1.conv.weight
+	 Mixed_6e.branch7x7dbl_1.bn.weight
+	 Mixed_6e.branch7x7dbl_1.bn.bias
+	 Mixed_6e.branch7x7dbl_2.conv.weight
+	 Mixed_6e.branch7x7dbl_2.bn.weight
+	 Mixed_6e.branch7x7dbl_2.bn.bias
+	 Mixed_6e.branch7x7dbl_3.conv.weight
+	 Mixed_6e.branch7x7dbl_3.bn.weight
+	 Mixed_6e.branch7x7dbl_3.bn.bias
+	 Mixed_6e.branch7x7dbl_4.conv.weight
+	 Mixed_6e.branch7x7dbl_4.bn.weight
+	 Mixed_6e.branch7x7dbl_4.bn.bias
+	 Mixed_6e.branch7x7dbl_5.conv.weight
+	 Mixed_6e.branch7x7dbl_5.bn.weight
+	 Mixed_6e.branch7x7dbl_5.bn.bias
+	 Mixed_6e.branch_pool.conv.weight
+	 Mixed_6e.branch_pool.bn.weight
+	 Mixed_6e.branch_pool.bn.bias
+	 AuxLogits.conv0.conv.weight
+	 AuxLogits.conv0.bn.weight
+	 AuxLogits.conv0.bn.bias
+	 AuxLogits.conv1.conv.weight
+	 AuxLogits.conv1.bn.weight
+	 AuxLogits.conv1.bn.bias
+	 AuxLogits.fc.weight
+	 AuxLogits.fc.bias
+	 Mixed_7a.branch3x3_1.conv.weight
+	 Mixed_7a.branch3x3_1.bn.weight
+	 Mixed_7a.branch3x3_1.bn.bias
+	 Mixed_7a.branch3x3_2.conv.weight
+	 Mixed_7a.branch3x3_2.bn.weight
+	 Mixed_7a.branch3x3_2.bn.bias
+	 Mixed_7a.branch7x7x3_1.conv.weight
+	 Mixed_7a.branch7x7x3_1.bn.weight
+	 Mixed_7a.branch7x7x3_1.bn.bias
+	 Mixed_7a.branch7x7x3_2.conv.weight
+	 Mixed_7a.branch7x7x3_2.bn.weight
+	 Mixed_7a.branch7x7x3_2.bn.bias
+	 Mixed_7a.branch7x7x3_3.conv.weight
+	 Mixed_7a.branch7x7x3_3.bn.weight
+	 Mixed_7a.branch7x7x3_3.bn.bias
+	 Mixed_7a.branch7x7x3_4.conv.weight
+	 Mixed_7a.branch7x7x3_4.bn.weight
+	 Mixed_7a.branch7x7x3_4.bn.bias
+	 Mixed_7b.branch1x1.conv.weight
+	 Mixed_7b.branch1x1.bn.weight
+	 Mixed_7b.branch1x1.bn.bias
+	 Mixed_7b.branch3x3_1.conv.weight
+	 Mixed_7b.branch3x3_1.bn.weight
+	 Mixed_7b.branch3x3_1.bn.bias
+	 Mixed_7b.branch3x3_2a.conv.weight
+	 Mixed_7b.branch3x3_2a.bn.weight
+	 Mixed_7b.branch3x3_2a.bn.bias
+	 Mixed_7b.branch3x3_2b.conv.weight
+	 Mixed_7b.branch3x3_2b.bn.weight
+	 Mixed_7b.branch3x3_2b.bn.bias
+	 Mixed_7b.branch3x3dbl_1.conv.weight
+	 Mixed_7b.branch3x3dbl_1.bn.weight
+	 Mixed_7b.branch3x3dbl_1.bn.bias
+	 Mixed_7b.branch3x3dbl_2.conv.weight
+	 Mixed_7b.branch3x3dbl_2.bn.weight
+	 Mixed_7b.branch3x3dbl_2.bn.bias
+	 Mixed_7b.branch3x3dbl_3a.conv.weight
+	 Mixed_7b.branch3x3dbl_3a.bn.weight
+	 Mixed_7b.branch3x3dbl_3a.bn.bias
+	 Mixed_7b.branch3x3dbl_3b.conv.weight
+	 Mixed_7b.branch3x3dbl_3b.bn.weight
+	 Mixed_7b.branch3x3dbl_3b.bn.bias
+	 Mixed_7b.branch_pool.conv.weight
+	 Mixed_7b.branch_pool.bn.weight
+	 Mixed_7b.branch_pool.bn.bias
+	 Mixed_7c.branch1x1.conv.weight
+	 Mixed_7c.branch1x1.bn.weight
+	 Mixed_7c.branch1x1.bn.bias
+	 Mixed_7c.branch3x3_1.conv.weight
+	 Mixed_7c.branch3x3_1.bn.weight
+	 Mixed_7c.branch3x3_1.bn.bias
+	 Mixed_7c.branch3x3_2a.conv.weight
+	 Mixed_7c.branch3x3_2a.bn.weight
+	 Mixed_7c.branch3x3_2a.bn.bias
+	 Mixed_7c.branch3x3_2b.conv.weight
+	 Mixed_7c.branch3x3_2b.bn.weight
+	 Mixed_7c.branch3x3_2b.bn.bias
+	 Mixed_7c.branch3x3dbl_1.conv.weight
+	 Mixed_7c.branch3x3dbl_1.bn.weight
+	 Mixed_7c.branch3x3dbl_1.bn.bias
+	 Mixed_7c.branch3x3dbl_2.conv.weight
+	 Mixed_7c.branch3x3dbl_2.bn.weight
+	 Mixed_7c.branch3x3dbl_2.bn.bias
+	 Mixed_7c.branch3x3dbl_3a.conv.weight
+	 Mixed_7c.branch3x3dbl_3a.bn.weight
+	 Mixed_7c.branch3x3dbl_3a.bn.bias
+	 Mixed_7c.branch3x3dbl_3b.conv.weight
+	 Mixed_7c.branch3x3dbl_3b.bn.weight
+	 Mixed_7c.branch3x3dbl_3b.bn.bias
+	 Mixed_7c.branch_pool.conv.weight
+	 Mixed_7c.branch_pool.bn.weight
+	 Mixed_7c.branch_pool.bn.bias
+	 fc.weight
+	 fc.bias
+Epoch 0/99
+----------
+train Loss: 0.1735 Acc: 0.9516
+val Loss: 0.2757 Acc: 0.9222
+
+Epoch 1/99
+----------
+train Loss: 0.1825 Acc: 0.9460
+val Loss: 0.2661 Acc: 0.9189
+
+Epoch 2/99
+----------
+train Loss: 0.1716 Acc: 0.9480
+val Loss: 0.2760 Acc: 0.9189
+
+Epoch 3/99
+----------
+train Loss: 0.1911 Acc: 0.9458
+val Loss: 0.3344 Acc: 0.9089
+
+Epoch 4/99
+----------
+train Loss: 0.1980 Acc: 0.9407
+val Loss: 0.3776 Acc: 0.9255
+
+Epoch 5/99
+----------
+train Loss: 0.1869 Acc: 0.9445
+val Loss: 0.2555 Acc: 0.9189
+
+Epoch 6/99
+----------
+train Loss: 0.1824 Acc: 0.9482
+val Loss: 0.3020 Acc: 0.9238
+
+Epoch 7/99
+----------
+train Loss: 0.1710 Acc: 0.9516
+val Loss: 0.2849 Acc: 0.9272
+
+Epoch 8/99
+----------
+train Loss: 0.1774 Acc: 0.9514
+val Loss: 0.3558 Acc: 0.9255
+
+Epoch 9/99
+----------
+train Loss: 0.1899 Acc: 0.9472
+val Loss: 0.4446 Acc: 0.9172
+
+Epoch 10/99
+----------
+train Loss: 0.1750 Acc: 0.9539
+val Loss: 0.3334 Acc: 0.9156
+
+Epoch 11/99
+----------
+train Loss: 0.1842 Acc: 0.9468
+val Loss: 0.3323 Acc: 0.9288
+
+Epoch 12/99
+----------
+train Loss: 0.1811 Acc: 0.9488
+val Loss: 0.2785 Acc: 0.9272
+
+Epoch 13/99
+----------
+train Loss: 0.1787 Acc: 0.9488
+val Loss: 0.3630 Acc: 0.9238
+
+Epoch 14/99
+----------
+train Loss: 0.1636 Acc: 0.9537
+val Loss: 0.3229 Acc: 0.9189
+
+Epoch 15/99
+----------
+train Loss: 0.1715 Acc: 0.9529
+val Loss: 0.5000 Acc: 0.8675
+
+Epoch 16/99
+----------
+train Loss: 0.1719 Acc: 0.9514
+val Loss: 0.3750 Acc: 0.9123
+
+Epoch 17/99
+----------
+train Loss: 0.1734 Acc: 0.9539
+val Loss: 0.3770 Acc: 0.9056
+
+Epoch 18/99
+----------
+train Loss: 0.1561 Acc: 0.9579
+val Loss: 0.3316 Acc: 0.9255
+
+Epoch 19/99
+----------
+train Loss: 0.1653 Acc: 0.9514
+val Loss: 0.4053 Acc: 0.9023
+
+Epoch 20/99
+----------
+train Loss: 0.1747 Acc: 0.9449
+val Loss: 0.3737 Acc: 0.9189
+
+Epoch 21/99
+----------
+train Loss: 0.1644 Acc: 0.9488
+val Loss: 0.3610 Acc: 0.9305
+
+Epoch 22/99
+----------
+train Loss: 0.1651 Acc: 0.9496
+val Loss: 0.3751 Acc: 0.9305
+
+Epoch 23/99
+----------
+train Loss: 0.1551 Acc: 0.9547
+val Loss: 0.3579 Acc: 0.9354
+
+Epoch 24/99
+----------
+train Loss: 0.1464 Acc: 0.9608
+val Loss: 0.3344 Acc: 0.9172
+
+Epoch 25/99
+----------
+train Loss: 0.1678 Acc: 0.9512
+val Loss: 0.4174 Acc: 0.9205
+
+Epoch 26/99
+----------
+train Loss: 0.1563 Acc: 0.9575
+val Loss: 0.3104 Acc: 0.9288
+
+Epoch 27/99
+----------
+train Loss: 0.1587 Acc: 0.9541
+val Loss: 0.3709 Acc: 0.9288
+
+Epoch 28/99
+----------
+train Loss: 0.1491 Acc: 0.9602
+val Loss: 0.4438 Acc: 0.9123
+
+Epoch 29/99
+----------
+train Loss: 0.1514 Acc: 0.9567
+val Loss: 0.3625 Acc: 0.9106
+
+Epoch 30/99
+----------
+train Loss: 0.1542 Acc: 0.9586
+val Loss: 0.4422 Acc: 0.8990
+
+Epoch 31/99
+----------
+train Loss: 0.1521 Acc: 0.9565
+val Loss: 0.4022 Acc: 0.9156
+
+Epoch 32/99
+----------
+train Loss: 0.1587 Acc: 0.9541
+val Loss: 0.3213 Acc: 0.9123
+
+Epoch 33/99
+----------
+train Loss: 0.1531 Acc: 0.9586
+val Loss: 0.3874 Acc: 0.9172
+
+Epoch 34/99
+----------
+train Loss: 0.1514 Acc: 0.9571
+val Loss: 0.3315 Acc: 0.9172
+
+Epoch 35/99
+----------
+train Loss: 0.1639 Acc: 0.9521
+val Loss: 0.3536 Acc: 0.9305
+
+Epoch 36/99
+----------
+train Loss: 0.1743 Acc: 0.9521
+val Loss: 0.5075 Acc: 0.8924
+
+Epoch 37/99
+----------
+train Loss: 0.1499 Acc: 0.9545
+val Loss: 0.4456 Acc: 0.8957
+
+Epoch 38/99
+----------
+train Loss: 0.1372 Acc: 0.9600
+val Loss: 0.4508 Acc: 0.9023
+
+Epoch 39/99
+----------
+train Loss: 0.1464 Acc: 0.9575
+val Loss: 0.4007 Acc: 0.9189
+
+Epoch 40/99
+----------
+train Loss: 0.1410 Acc: 0.9575
+val Loss: 0.3937 Acc: 0.9123
+
+Epoch 41/99
+----------
+train Loss: 0.1365 Acc: 0.9638
+val Loss: 0.5080 Acc: 0.9007
+
+Epoch 42/99
+----------
+train Loss: 0.1384 Acc: 0.9588
+val Loss: 0.4332 Acc: 0.9156
+
+Epoch 43/99
+----------
+train Loss: 0.1485 Acc: 0.9577
+val Loss: 0.4330 Acc: 0.9205
+
+Epoch 44/99
+----------
+train Loss: 0.1552 Acc: 0.9545
+val Loss: 0.3459 Acc: 0.9371
+
+Epoch 45/99
+----------
+train Loss: 0.1368 Acc: 0.9622
+val Loss: 0.3534 Acc: 0.9288
+
+Epoch 46/99
+----------
+train Loss: 0.1337 Acc: 0.9649
+val Loss: 0.4585 Acc: 0.9123
+
+Epoch 47/99
+----------
+train Loss: 0.1334 Acc: 0.9604
+val Loss: 0.4777 Acc: 0.9007
+
+Epoch 48/99
+----------
+train Loss: 0.1346 Acc: 0.9606
+val Loss: 0.4332 Acc: 0.8791
+
+Epoch 49/99
+----------
+train Loss: 0.1473 Acc: 0.9575
+val Loss: 0.3662 Acc: 0.9189
+
+Epoch 50/99
+----------
+train Loss: 0.1497 Acc: 0.9577
+val Loss: 0.3565 Acc: 0.8924
+
+Epoch 51/99
+----------
+train Loss: 0.1467 Acc: 0.9584
+val Loss: 0.3086 Acc: 0.9139
+
+Epoch 52/99
+----------
+train Loss: 0.1494 Acc: 0.9571
+val Loss: 0.4267 Acc: 0.9023
+
+Epoch 53/99
+----------
+train Loss: 0.1433 Acc: 0.9555
+val Loss: 0.3808 Acc: 0.9255
+
+Epoch 54/99
+----------
+train Loss: 0.1513 Acc: 0.9557
+val Loss: 0.4320 Acc: 0.8874
+
+Epoch 55/99
+----------
+train Loss: 0.1310 Acc: 0.9636
+val Loss: 0.3792 Acc: 0.9189
+
+Epoch 56/99
+----------
+train Loss: 0.1419 Acc: 0.9577
+val Loss: 0.4180 Acc: 0.9040
+
+Epoch 57/99
+----------
+train Loss: 0.1285 Acc: 0.9630
+val Loss: 0.4063 Acc: 0.9040
+
+Epoch 58/99
+----------
+train Loss: 0.1391 Acc: 0.9586
+val Loss: 0.4565 Acc: 0.9073
+
+Epoch 59/99
+----------
+train Loss: 0.1280 Acc: 0.9614
+val Loss: 0.4086 Acc: 0.8974
+
+Epoch 60/99
+----------
+train Loss: 0.1315 Acc: 0.9606
+val Loss: 0.3933 Acc: 0.8974
+
+Epoch 61/99
+----------
+train Loss: 0.1131 Acc: 0.9683
+val Loss: 0.3800 Acc: 0.9222
+
+Epoch 62/99
+----------
+train Loss: 0.1252 Acc: 0.9651
+val Loss: 0.3702 Acc: 0.9272
+
+Epoch 63/99
+----------
+train Loss: 0.1302 Acc: 0.9632
+val Loss: 0.5523 Acc: 0.8825
+
+Epoch 64/99
+----------
+train Loss: 0.1251 Acc: 0.9636
+val Loss: 0.3871 Acc: 0.9156
+
+Epoch 65/99
+----------
+train Loss: 0.1297 Acc: 0.9612
+val Loss: 0.3582 Acc: 0.9123
+
+Epoch 66/99
+----------
+train Loss: 0.1423 Acc: 0.9588
+val Loss: 0.4970 Acc: 0.9123
+
+Epoch 67/99
+----------
+train Loss: 0.1247 Acc: 0.9640
+val Loss: 0.4172 Acc: 0.9156
+
+Epoch 68/99
+----------
+train Loss: 0.1296 Acc: 0.9642
+val Loss: 0.5100 Acc: 0.8957
+
+Epoch 69/99
+----------
+train Loss: 0.1244 Acc: 0.9632
+val Loss: 0.4820 Acc: 0.9073
+
+Epoch 70/99
+----------
+train Loss: 0.1268 Acc: 0.9638
+val Loss: 0.6733 Acc: 0.8775
+
+Epoch 71/99
+----------
+train Loss: 0.1198 Acc: 0.9655
+val Loss: 0.4776 Acc: 0.9255
+
+Epoch 72/99
+----------
+train Loss: 0.1279 Acc: 0.9636
+val Loss: 0.5320 Acc: 0.9123
+
+Epoch 73/99
+----------
+train Loss: 0.1267 Acc: 0.9655
+val Loss: 0.6010 Acc: 0.8924
+
+Epoch 74/99
+----------
+train Loss: 0.1132 Acc: 0.9665
+val Loss: 0.4253 Acc: 0.9172
+
+Epoch 75/99
+----------
+train Loss: 0.1249 Acc: 0.9646
+val Loss: 0.4974 Acc: 0.9106
+
+Epoch 76/99
+----------
+train Loss: 0.1124 Acc: 0.9681
+val Loss: 0.3747 Acc: 0.9238
+
+Epoch 77/99
+----------
+train Loss: 0.1269 Acc: 0.9663
+val Loss: 0.3334 Acc: 0.9139
+
+Epoch 78/99
+----------
+train Loss: 0.1303 Acc: 0.9636
+val Loss: 0.5408 Acc: 0.9007
+
+Epoch 79/99
+----------
+train Loss: 0.1205 Acc: 0.9646
+val Loss: 0.4482 Acc: 0.9123
+
+Epoch 80/99
+----------
+train Loss: 0.1209 Acc: 0.9630
+val Loss: 0.5164 Acc: 0.9106
+
+Epoch 81/99
+----------
+train Loss: 0.1196 Acc: 0.9642
+val Loss: 0.5507 Acc: 0.8990
+
+Epoch 82/99
+----------
+train Loss: 0.1175 Acc: 0.9661
+val Loss: 0.6099 Acc: 0.8808
+
+Epoch 83/99
+----------
+train Loss: 0.1410 Acc: 0.9581
+val Loss: 0.4027 Acc: 0.9172
+
+Epoch 84/99
+----------
+train Loss: 0.1115 Acc: 0.9693
+val Loss: 0.4343 Acc: 0.9106
+
+Epoch 85/99
+----------
+train Loss: 0.1126 Acc: 0.9669
+val Loss: 0.4221 Acc: 0.9205
+
+Epoch 86/99
+----------
+train Loss: 0.1244 Acc: 0.9659
+val Loss: 0.4085 Acc: 0.9056
+
+Epoch 87/99
+----------
+train Loss: 0.0984 Acc: 0.9701
+val Loss: 0.3846 Acc: 0.9172
+
+Epoch 88/99
+----------
+train Loss: 0.1208 Acc: 0.9655
+val Loss: 0.5721 Acc: 0.9040
+
+Epoch 89/99
+----------
+train Loss: 0.1228 Acc: 0.9661
+val Loss: 0.4387 Acc: 0.9172
+
+Epoch 90/99
+----------
+train Loss: 0.1257 Acc: 0.9628
+val Loss: 0.3960 Acc: 0.9189
+
+Epoch 91/99
+----------
+train Loss: 0.1039 Acc: 0.9699
+val Loss: 0.4965 Acc: 0.8825
+
+Epoch 92/99
+----------
+train Loss: 0.1322 Acc: 0.9626
+val Loss: 0.4636 Acc: 0.9222
+
+Epoch 93/99
+----------
+train Loss: 0.1154 Acc: 0.9671
+val Loss: 0.5340 Acc: 0.8990
+
+Epoch 94/99
+----------
+train Loss: 0.1070 Acc: 0.9695
+val Loss: 0.6130 Acc: 0.8791
+
+Epoch 95/99
+----------
+train Loss: 0.1213 Acc: 0.9659
+val Loss: 0.4932 Acc: 0.9255
+
+Epoch 96/99
+----------
+train Loss: 0.1059 Acc: 0.9679
+val Loss: 0.5900 Acc: 0.9056
+
+Epoch 97/99
+----------
+train Loss: 0.1186 Acc: 0.9663
+val Loss: 0.5818 Acc: 0.8974
+
+Epoch 98/99
+----------
+train Loss: 0.1177 Acc: 0.9661
+val Loss: 0.5683 Acc: 0.8891
+
+Epoch 99/99
+----------
+train Loss: 0.1128 Acc: 0.9659
+val Loss: 0.5106 Acc: 0.8957
+
+Training complete in 343m 47s
+Best val Acc: 0.937086

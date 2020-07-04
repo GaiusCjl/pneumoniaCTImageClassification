@@ -4,7 +4,7 @@
 @Autor: 吴宇辉
 @Date: 2020-06-10 15:00:26
 @LastEditors: 吴宇辉
-@LastEditTime: 2020-06-13 10:51:42
+@LastEditTime: 2020-06-17 15:51:20
 '''
 # -*- coding: utf-8 -*-
 
@@ -18,7 +18,7 @@ def plotloss(losses, accs):
     plt.xlabel('epoches')
     plt.ylabel('loss')
     plt.legend()
-    plt.savefig(dir+'loss.png', dpi=1080)    
+    plt.savefig(dir+'loss_200.png', dpi=1080)    
     plt.show()
     
     plt.plot(x_loss, accs['train'], '-', label='train')
@@ -26,11 +26,11 @@ def plotloss(losses, accs):
     plt.xlabel('epoches')
     plt.ylabel('acc')
     plt.legend()
-    plt.savefig(dir+'acc.png', dpi=1080)    
+    plt.savefig(dir+'acc_200.png', dpi=1080)    
     plt.show()
 
-dir = 'Adam_150\\'
-data = pd.read_csv(dir + 'result.txt', header=None)
+dir = 'Adam\\'
+data = pd.read_csv(dir + 'data1.txt', header=None)
 print(data[0] )
 
 losses = {'train': [i for ix, i in enumerate(data[0]) if ix % 2 == 0], 'test': [i for ix, i in enumerate(data[0]) if ix % 2 == 1]}

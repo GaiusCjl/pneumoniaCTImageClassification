@@ -1,8 +1,6 @@
 PyTorch Version:  1.5.0+cu101
 Torchvision Version:  0.6.0+cu101
-Downloading: "https://download.pytorch.org/models/inception_v3_google-1a9a5a14.pth" to /root/.cache/torch/checkpoints/inception_v3_google-1a9a5a14.pth
-100%
-104M/104M [00:14<00:00, 7.45MB/s]
+load  /content/drive/My Drive/modelTestUploadGoogle/models/inception_Adam_bs16_ep100.pkl  model parameters.
 
 Inception3(
   (Conv2d_1a_3x3): BasicConv2d(
@@ -418,84 +416,797 @@ Inception3(
 )
 Initializing Datasets and Dataloaders...
 Params to learn:
+	 Conv2d_1a_3x3.conv.weight
+	 Conv2d_1a_3x3.bn.weight
+	 Conv2d_1a_3x3.bn.bias
+	 Conv2d_2a_3x3.conv.weight
+	 Conv2d_2a_3x3.bn.weight
+	 Conv2d_2a_3x3.bn.bias
+	 Conv2d_2b_3x3.conv.weight
+	 Conv2d_2b_3x3.bn.weight
+	 Conv2d_2b_3x3.bn.bias
+	 Conv2d_3b_1x1.conv.weight
+	 Conv2d_3b_1x1.bn.weight
+	 Conv2d_3b_1x1.bn.bias
+	 Conv2d_4a_3x3.conv.weight
+	 Conv2d_4a_3x3.bn.weight
+	 Conv2d_4a_3x3.bn.bias
+	 Mixed_5b.branch1x1.conv.weight
+	 Mixed_5b.branch1x1.bn.weight
+	 Mixed_5b.branch1x1.bn.bias
+	 Mixed_5b.branch5x5_1.conv.weight
+	 Mixed_5b.branch5x5_1.bn.weight
+	 Mixed_5b.branch5x5_1.bn.bias
+	 Mixed_5b.branch5x5_2.conv.weight
+	 Mixed_5b.branch5x5_2.bn.weight
+	 Mixed_5b.branch5x5_2.bn.bias
+	 Mixed_5b.branch3x3dbl_1.conv.weight
+	 Mixed_5b.branch3x3dbl_1.bn.weight
+	 Mixed_5b.branch3x3dbl_1.bn.bias
+	 Mixed_5b.branch3x3dbl_2.conv.weight
+	 Mixed_5b.branch3x3dbl_2.bn.weight
+	 Mixed_5b.branch3x3dbl_2.bn.bias
+	 Mixed_5b.branch3x3dbl_3.conv.weight
+	 Mixed_5b.branch3x3dbl_3.bn.weight
+	 Mixed_5b.branch3x3dbl_3.bn.bias
+	 Mixed_5b.branch_pool.conv.weight
+	 Mixed_5b.branch_pool.bn.weight
+	 Mixed_5b.branch_pool.bn.bias
+	 Mixed_5c.branch1x1.conv.weight
+	 Mixed_5c.branch1x1.bn.weight
+	 Mixed_5c.branch1x1.bn.bias
+	 Mixed_5c.branch5x5_1.conv.weight
+	 Mixed_5c.branch5x5_1.bn.weight
+	 Mixed_5c.branch5x5_1.bn.bias
+	 Mixed_5c.branch5x5_2.conv.weight
+	 Mixed_5c.branch5x5_2.bn.weight
+	 Mixed_5c.branch5x5_2.bn.bias
+	 Mixed_5c.branch3x3dbl_1.conv.weight
+	 Mixed_5c.branch3x3dbl_1.bn.weight
+	 Mixed_5c.branch3x3dbl_1.bn.bias
+	 Mixed_5c.branch3x3dbl_2.conv.weight
+	 Mixed_5c.branch3x3dbl_2.bn.weight
+	 Mixed_5c.branch3x3dbl_2.bn.bias
+	 Mixed_5c.branch3x3dbl_3.conv.weight
+	 Mixed_5c.branch3x3dbl_3.bn.weight
+	 Mixed_5c.branch3x3dbl_3.bn.bias
+	 Mixed_5c.branch_pool.conv.weight
+	 Mixed_5c.branch_pool.bn.weight
+	 Mixed_5c.branch_pool.bn.bias
+	 Mixed_5d.branch1x1.conv.weight
+	 Mixed_5d.branch1x1.bn.weight
+	 Mixed_5d.branch1x1.bn.bias
+	 Mixed_5d.branch5x5_1.conv.weight
+	 Mixed_5d.branch5x5_1.bn.weight
+	 Mixed_5d.branch5x5_1.bn.bias
+	 Mixed_5d.branch5x5_2.conv.weight
+	 Mixed_5d.branch5x5_2.bn.weight
+	 Mixed_5d.branch5x5_2.bn.bias
+	 Mixed_5d.branch3x3dbl_1.conv.weight
+	 Mixed_5d.branch3x3dbl_1.bn.weight
+	 Mixed_5d.branch3x3dbl_1.bn.bias
+	 Mixed_5d.branch3x3dbl_2.conv.weight
+	 Mixed_5d.branch3x3dbl_2.bn.weight
+	 Mixed_5d.branch3x3dbl_2.bn.bias
+	 Mixed_5d.branch3x3dbl_3.conv.weight
+	 Mixed_5d.branch3x3dbl_3.bn.weight
+	 Mixed_5d.branch3x3dbl_3.bn.bias
+	 Mixed_5d.branch_pool.conv.weight
+	 Mixed_5d.branch_pool.bn.weight
+	 Mixed_5d.branch_pool.bn.bias
+	 Mixed_6a.branch3x3.conv.weight
+	 Mixed_6a.branch3x3.bn.weight
+	 Mixed_6a.branch3x3.bn.bias
+	 Mixed_6a.branch3x3dbl_1.conv.weight
+	 Mixed_6a.branch3x3dbl_1.bn.weight
+	 Mixed_6a.branch3x3dbl_1.bn.bias
+	 Mixed_6a.branch3x3dbl_2.conv.weight
+	 Mixed_6a.branch3x3dbl_2.bn.weight
+	 Mixed_6a.branch3x3dbl_2.bn.bias
+	 Mixed_6a.branch3x3dbl_3.conv.weight
+	 Mixed_6a.branch3x3dbl_3.bn.weight
+	 Mixed_6a.branch3x3dbl_3.bn.bias
+	 Mixed_6b.branch1x1.conv.weight
+	 Mixed_6b.branch1x1.bn.weight
+	 Mixed_6b.branch1x1.bn.bias
+	 Mixed_6b.branch7x7_1.conv.weight
+	 Mixed_6b.branch7x7_1.bn.weight
+	 Mixed_6b.branch7x7_1.bn.bias
+	 Mixed_6b.branch7x7_2.conv.weight
+	 Mixed_6b.branch7x7_2.bn.weight
+	 Mixed_6b.branch7x7_2.bn.bias
+	 Mixed_6b.branch7x7_3.conv.weight
+	 Mixed_6b.branch7x7_3.bn.weight
+	 Mixed_6b.branch7x7_3.bn.bias
+	 Mixed_6b.branch7x7dbl_1.conv.weight
+	 Mixed_6b.branch7x7dbl_1.bn.weight
+	 Mixed_6b.branch7x7dbl_1.bn.bias
+	 Mixed_6b.branch7x7dbl_2.conv.weight
+	 Mixed_6b.branch7x7dbl_2.bn.weight
+	 Mixed_6b.branch7x7dbl_2.bn.bias
+	 Mixed_6b.branch7x7dbl_3.conv.weight
+	 Mixed_6b.branch7x7dbl_3.bn.weight
+	 Mixed_6b.branch7x7dbl_3.bn.bias
+	 Mixed_6b.branch7x7dbl_4.conv.weight
+	 Mixed_6b.branch7x7dbl_4.bn.weight
+	 Mixed_6b.branch7x7dbl_4.bn.bias
+	 Mixed_6b.branch7x7dbl_5.conv.weight
+	 Mixed_6b.branch7x7dbl_5.bn.weight
+	 Mixed_6b.branch7x7dbl_5.bn.bias
+	 Mixed_6b.branch_pool.conv.weight
+	 Mixed_6b.branch_pool.bn.weight
+	 Mixed_6b.branch_pool.bn.bias
+	 Mixed_6c.branch1x1.conv.weight
+	 Mixed_6c.branch1x1.bn.weight
+	 Mixed_6c.branch1x1.bn.bias
+	 Mixed_6c.branch7x7_1.conv.weight
+	 Mixed_6c.branch7x7_1.bn.weight
+	 Mixed_6c.branch7x7_1.bn.bias
+	 Mixed_6c.branch7x7_2.conv.weight
+	 Mixed_6c.branch7x7_2.bn.weight
+	 Mixed_6c.branch7x7_2.bn.bias
+	 Mixed_6c.branch7x7_3.conv.weight
+	 Mixed_6c.branch7x7_3.bn.weight
+	 Mixed_6c.branch7x7_3.bn.bias
+	 Mixed_6c.branch7x7dbl_1.conv.weight
+	 Mixed_6c.branch7x7dbl_1.bn.weight
+	 Mixed_6c.branch7x7dbl_1.bn.bias
+	 Mixed_6c.branch7x7dbl_2.conv.weight
+	 Mixed_6c.branch7x7dbl_2.bn.weight
+	 Mixed_6c.branch7x7dbl_2.bn.bias
+	 Mixed_6c.branch7x7dbl_3.conv.weight
+	 Mixed_6c.branch7x7dbl_3.bn.weight
+	 Mixed_6c.branch7x7dbl_3.bn.bias
+	 Mixed_6c.branch7x7dbl_4.conv.weight
+	 Mixed_6c.branch7x7dbl_4.bn.weight
+	 Mixed_6c.branch7x7dbl_4.bn.bias
+	 Mixed_6c.branch7x7dbl_5.conv.weight
+	 Mixed_6c.branch7x7dbl_5.bn.weight
+	 Mixed_6c.branch7x7dbl_5.bn.bias
+	 Mixed_6c.branch_pool.conv.weight
+	 Mixed_6c.branch_pool.bn.weight
+	 Mixed_6c.branch_pool.bn.bias
+	 Mixed_6d.branch1x1.conv.weight
+	 Mixed_6d.branch1x1.bn.weight
+	 Mixed_6d.branch1x1.bn.bias
+	 Mixed_6d.branch7x7_1.conv.weight
+	 Mixed_6d.branch7x7_1.bn.weight
+	 Mixed_6d.branch7x7_1.bn.bias
+	 Mixed_6d.branch7x7_2.conv.weight
+	 Mixed_6d.branch7x7_2.bn.weight
+	 Mixed_6d.branch7x7_2.bn.bias
+	 Mixed_6d.branch7x7_3.conv.weight
+	 Mixed_6d.branch7x7_3.bn.weight
+	 Mixed_6d.branch7x7_3.bn.bias
+	 Mixed_6d.branch7x7dbl_1.conv.weight
+	 Mixed_6d.branch7x7dbl_1.bn.weight
+	 Mixed_6d.branch7x7dbl_1.bn.bias
+	 Mixed_6d.branch7x7dbl_2.conv.weight
+	 Mixed_6d.branch7x7dbl_2.bn.weight
+	 Mixed_6d.branch7x7dbl_2.bn.bias
+	 Mixed_6d.branch7x7dbl_3.conv.weight
+	 Mixed_6d.branch7x7dbl_3.bn.weight
+	 Mixed_6d.branch7x7dbl_3.bn.bias
+	 Mixed_6d.branch7x7dbl_4.conv.weight
+	 Mixed_6d.branch7x7dbl_4.bn.weight
+	 Mixed_6d.branch7x7dbl_4.bn.bias
+	 Mixed_6d.branch7x7dbl_5.conv.weight
+	 Mixed_6d.branch7x7dbl_5.bn.weight
+	 Mixed_6d.branch7x7dbl_5.bn.bias
+	 Mixed_6d.branch_pool.conv.weight
+	 Mixed_6d.branch_pool.bn.weight
+	 Mixed_6d.branch_pool.bn.bias
+	 Mixed_6e.branch1x1.conv.weight
+	 Mixed_6e.branch1x1.bn.weight
+	 Mixed_6e.branch1x1.bn.bias
+	 Mixed_6e.branch7x7_1.conv.weight
+	 Mixed_6e.branch7x7_1.bn.weight
+	 Mixed_6e.branch7x7_1.bn.bias
+	 Mixed_6e.branch7x7_2.conv.weight
+	 Mixed_6e.branch7x7_2.bn.weight
+	 Mixed_6e.branch7x7_2.bn.bias
+	 Mixed_6e.branch7x7_3.conv.weight
+	 Mixed_6e.branch7x7_3.bn.weight
+	 Mixed_6e.branch7x7_3.bn.bias
+	 Mixed_6e.branch7x7dbl_1.conv.weight
+	 Mixed_6e.branch7x7dbl_1.bn.weight
+	 Mixed_6e.branch7x7dbl_1.bn.bias
+	 Mixed_6e.branch7x7dbl_2.conv.weight
+	 Mixed_6e.branch7x7dbl_2.bn.weight
+	 Mixed_6e.branch7x7dbl_2.bn.bias
+	 Mixed_6e.branch7x7dbl_3.conv.weight
+	 Mixed_6e.branch7x7dbl_3.bn.weight
+	 Mixed_6e.branch7x7dbl_3.bn.bias
+	 Mixed_6e.branch7x7dbl_4.conv.weight
+	 Mixed_6e.branch7x7dbl_4.bn.weight
+	 Mixed_6e.branch7x7dbl_4.bn.bias
+	 Mixed_6e.branch7x7dbl_5.conv.weight
+	 Mixed_6e.branch7x7dbl_5.bn.weight
+	 Mixed_6e.branch7x7dbl_5.bn.bias
+	 Mixed_6e.branch_pool.conv.weight
+	 Mixed_6e.branch_pool.bn.weight
+	 Mixed_6e.branch_pool.bn.bias
+	 AuxLogits.conv0.conv.weight
+	 AuxLogits.conv0.bn.weight
+	 AuxLogits.conv0.bn.bias
+	 AuxLogits.conv1.conv.weight
+	 AuxLogits.conv1.bn.weight
+	 AuxLogits.conv1.bn.bias
 	 AuxLogits.fc.weight
 	 AuxLogits.fc.bias
+	 Mixed_7a.branch3x3_1.conv.weight
+	 Mixed_7a.branch3x3_1.bn.weight
+	 Mixed_7a.branch3x3_1.bn.bias
+	 Mixed_7a.branch3x3_2.conv.weight
+	 Mixed_7a.branch3x3_2.bn.weight
+	 Mixed_7a.branch3x3_2.bn.bias
+	 Mixed_7a.branch7x7x3_1.conv.weight
+	 Mixed_7a.branch7x7x3_1.bn.weight
+	 Mixed_7a.branch7x7x3_1.bn.bias
+	 Mixed_7a.branch7x7x3_2.conv.weight
+	 Mixed_7a.branch7x7x3_2.bn.weight
+	 Mixed_7a.branch7x7x3_2.bn.bias
+	 Mixed_7a.branch7x7x3_3.conv.weight
+	 Mixed_7a.branch7x7x3_3.bn.weight
+	 Mixed_7a.branch7x7x3_3.bn.bias
+	 Mixed_7a.branch7x7x3_4.conv.weight
+	 Mixed_7a.branch7x7x3_4.bn.weight
+	 Mixed_7a.branch7x7x3_4.bn.bias
+	 Mixed_7b.branch1x1.conv.weight
+	 Mixed_7b.branch1x1.bn.weight
+	 Mixed_7b.branch1x1.bn.bias
+	 Mixed_7b.branch3x3_1.conv.weight
+	 Mixed_7b.branch3x3_1.bn.weight
+	 Mixed_7b.branch3x3_1.bn.bias
+	 Mixed_7b.branch3x3_2a.conv.weight
+	 Mixed_7b.branch3x3_2a.bn.weight
+	 Mixed_7b.branch3x3_2a.bn.bias
+	 Mixed_7b.branch3x3_2b.conv.weight
+	 Mixed_7b.branch3x3_2b.bn.weight
+	 Mixed_7b.branch3x3_2b.bn.bias
+	 Mixed_7b.branch3x3dbl_1.conv.weight
+	 Mixed_7b.branch3x3dbl_1.bn.weight
+	 Mixed_7b.branch3x3dbl_1.bn.bias
+	 Mixed_7b.branch3x3dbl_2.conv.weight
+	 Mixed_7b.branch3x3dbl_2.bn.weight
+	 Mixed_7b.branch3x3dbl_2.bn.bias
+	 Mixed_7b.branch3x3dbl_3a.conv.weight
+	 Mixed_7b.branch3x3dbl_3a.bn.weight
+	 Mixed_7b.branch3x3dbl_3a.bn.bias
+	 Mixed_7b.branch3x3dbl_3b.conv.weight
+	 Mixed_7b.branch3x3dbl_3b.bn.weight
+	 Mixed_7b.branch3x3dbl_3b.bn.bias
+	 Mixed_7b.branch_pool.conv.weight
+	 Mixed_7b.branch_pool.bn.weight
+	 Mixed_7b.branch_pool.bn.bias
+	 Mixed_7c.branch1x1.conv.weight
+	 Mixed_7c.branch1x1.bn.weight
+	 Mixed_7c.branch1x1.bn.bias
+	 Mixed_7c.branch3x3_1.conv.weight
+	 Mixed_7c.branch3x3_1.bn.weight
+	 Mixed_7c.branch3x3_1.bn.bias
+	 Mixed_7c.branch3x3_2a.conv.weight
+	 Mixed_7c.branch3x3_2a.bn.weight
+	 Mixed_7c.branch3x3_2a.bn.bias
+	 Mixed_7c.branch3x3_2b.conv.weight
+	 Mixed_7c.branch3x3_2b.bn.weight
+	 Mixed_7c.branch3x3_2b.bn.bias
+	 Mixed_7c.branch3x3dbl_1.conv.weight
+	 Mixed_7c.branch3x3dbl_1.bn.weight
+	 Mixed_7c.branch3x3dbl_1.bn.bias
+	 Mixed_7c.branch3x3dbl_2.conv.weight
+	 Mixed_7c.branch3x3dbl_2.bn.weight
+	 Mixed_7c.branch3x3dbl_2.bn.bias
+	 Mixed_7c.branch3x3dbl_3a.conv.weight
+	 Mixed_7c.branch3x3dbl_3a.bn.weight
+	 Mixed_7c.branch3x3dbl_3a.bn.bias
+	 Mixed_7c.branch3x3dbl_3b.conv.weight
+	 Mixed_7c.branch3x3dbl_3b.bn.weight
+	 Mixed_7c.branch3x3dbl_3b.bn.bias
+	 Mixed_7c.branch_pool.conv.weight
+	 Mixed_7c.branch_pool.bn.weight
+	 Mixed_7c.branch_pool.bn.bias
 	 fc.weight
 	 fc.bias
-Epoch 0/14
+Epoch 0/99
 ----------
-train Loss: 1.4029 Acc: 0.4869
-val Loss: 0.8836 Acc: 0.6250
+train Loss: 0.6037 Acc: 0.8064
+val Loss: 0.3770 Acc: 0.8179
 
-Epoch 1/14
+Epoch 1/99
 ----------
-train Loss: 1.1857 Acc: 0.5843
-val Loss: 0.8704 Acc: 0.6875
+train Loss: 0.6050 Acc: 0.8161
+val Loss: 0.3685 Acc: 0.8295
 
-Epoch 2/14
+Epoch 2/99
 ----------
-train Loss: 1.1449 Acc: 0.6395
-val Loss: 0.7091 Acc: 0.8125
+train Loss: 0.5873 Acc: 0.8236
+val Loss: 0.3961 Acc: 0.8195
 
-Epoch 3/14
+Epoch 3/99
 ----------
-train Loss: 1.1076 Acc: 0.6497
-val Loss: 1.0310 Acc: 0.3750
+train Loss: 0.5774 Acc: 0.8206
+val Loss: 0.3890 Acc: 0.8245
 
-Epoch 4/14
+Epoch 4/99
 ----------
-train Loss: 1.0491 Acc: 0.6541
-val Loss: 0.9311 Acc: 0.5000
+train Loss: 0.5977 Acc: 0.8139
+val Loss: 0.4295 Acc: 0.8129
 
-Epoch 5/14
+Epoch 5/99
 ----------
-train Loss: 1.0333 Acc: 0.6919
-val Loss: 1.0892 Acc: 0.4375
+train Loss: 0.5862 Acc: 0.8141
+val Loss: 0.3936 Acc: 0.8195
 
-Epoch 6/14
+Epoch 6/99
 ----------
-train Loss: 1.0734 Acc: 0.6265
-val Loss: 1.2235 Acc: 0.3125
+train Loss: 0.5948 Acc: 0.8206
+val Loss: 0.3914 Acc: 0.8245
 
-Epoch 7/14
+Epoch 7/99
 ----------
-train Loss: 1.0616 Acc: 0.6555
-val Loss: 0.6914 Acc: 0.7500
+train Loss: 0.5895 Acc: 0.8208
+val Loss: 0.4006 Acc: 0.8179
 
-Epoch 8/14
+Epoch 8/99
 ----------
-train Loss: 1.0355 Acc: 0.6773
-val Loss: 0.6520 Acc: 0.8750
+train Loss: 0.5878 Acc: 0.8194
+val Loss: 0.4015 Acc: 0.8179
 
-Epoch 9/14
+Epoch 9/99
 ----------
-train Loss: 1.0576 Acc: 0.6628
-val Loss: 0.9575 Acc: 0.5000
+train Loss: 0.5836 Acc: 0.8261
+val Loss: 0.3833 Acc: 0.8195
 
-Epoch 10/14
+Epoch 10/99
 ----------
-train Loss: 1.0146 Acc: 0.6613
-val Loss: 0.7103 Acc: 0.6875
+train Loss: 0.5845 Acc: 0.8249
+val Loss: 0.3913 Acc: 0.8228
 
-Epoch 11/14
+Epoch 11/99
 ----------
-train Loss: 1.0549 Acc: 0.6599
-val Loss: 0.9975 Acc: 0.5625
+train Loss: 0.5785 Acc: 0.8232
+val Loss: 0.3629 Acc: 0.8262
 
-Epoch 12/14
+Epoch 12/99
 ----------
-train Loss: 1.0196 Acc: 0.6410
-val Loss: 0.8591 Acc: 0.5625
+train Loss: 0.5649 Acc: 0.8247
+val Loss: 0.3959 Acc: 0.8162
 
-Epoch 13/14
+Epoch 13/99
 ----------
-train Loss: 1.0369 Acc: 0.6701
-val Loss: 0.5912 Acc: 0.8125
+train Loss: 0.5718 Acc: 0.8265
+val Loss: 0.4163 Acc: 0.8162
 
-Epoch 14/14
+Epoch 14/99
 ----------
-train Loss: 1.0880 Acc: 0.6381
-val Loss: 0.6414 Acc: 0.7500
+train Loss: 0.5689 Acc: 0.8228
+val Loss: 0.3888 Acc: 0.8212
 
-Training complete in 4m 25s
-Best val Acc: 0.875000
+Epoch 15/99
+----------
+train Loss: 0.5768 Acc: 0.8222
+val Loss: 0.4030 Acc: 0.8113
+
+Epoch 16/99
+----------
+train Loss: 0.5686 Acc: 0.8241
+val Loss: 0.3905 Acc: 0.8179
+
+Epoch 17/99
+----------
+train Loss: 0.5680 Acc: 0.8281
+val Loss: 0.3855 Acc: 0.8195
+
+Epoch 18/99
+----------
+train Loss: 0.5670 Acc: 0.8251
+val Loss: 0.3879 Acc: 0.8162
+
+Epoch 19/99
+----------
+train Loss: 0.5773 Acc: 0.8257
+val Loss: 0.3912 Acc: 0.8113
+
+Epoch 20/99
+----------
+train Loss: 0.5579 Acc: 0.8293
+val Loss: 0.3680 Acc: 0.8262
+
+Epoch 21/99
+----------
+train Loss: 0.5724 Acc: 0.8228
+val Loss: 0.3837 Acc: 0.8162
+
+Epoch 22/99
+----------
+train Loss: 0.5503 Acc: 0.8299
+val Loss: 0.3952 Acc: 0.8063
+
+Epoch 23/99
+----------
+train Loss: 0.5568 Acc: 0.8287
+val Loss: 0.4192 Acc: 0.8063
+
+Epoch 24/99
+----------
+train Loss: 0.5634 Acc: 0.8293
+val Loss: 0.4145 Acc: 0.7997
+
+Epoch 25/99
+----------
+train Loss: 0.5558 Acc: 0.8271
+val Loss: 0.4138 Acc: 0.8079
+
+Epoch 26/99
+----------
+train Loss: 0.5522 Acc: 0.8310
+val Loss: 0.3923 Acc: 0.8162
+
+Epoch 27/99
+----------
+train Loss: 0.5590 Acc: 0.8253
+val Loss: 0.3865 Acc: 0.8129
+
+Epoch 28/99
+----------
+train Loss: 0.5530 Acc: 0.8283
+val Loss: 0.3996 Acc: 0.8146
+
+Epoch 29/99
+----------
+train Loss: 0.5591 Acc: 0.8247
+val Loss: 0.3948 Acc: 0.8146
+
+Epoch 30/99
+----------
+train Loss: 0.5653 Acc: 0.8220
+val Loss: 0.4136 Acc: 0.8063
+
+Epoch 31/99
+----------
+train Loss: 0.5657 Acc: 0.8239
+val Loss: 0.3753 Acc: 0.8228
+
+Epoch 32/99
+----------
+train Loss: 0.5455 Acc: 0.8316
+val Loss: 0.4030 Acc: 0.8129
+
+Epoch 33/99
+----------
+train Loss: 0.5592 Acc: 0.8279
+val Loss: 0.4216 Acc: 0.8129
+
+Epoch 34/99
+----------
+train Loss: 0.5472 Acc: 0.8289
+val Loss: 0.3996 Acc: 0.8113
+
+Epoch 35/99
+----------
+train Loss: 0.5479 Acc: 0.8310
+val Loss: 0.4452 Acc: 0.8013
+
+Epoch 36/99
+----------
+train Loss: 0.5423 Acc: 0.8308
+val Loss: 0.3892 Acc: 0.8129
+
+Epoch 37/99
+----------
+train Loss: 0.5416 Acc: 0.8310
+val Loss: 0.4173 Acc: 0.8129
+
+Epoch 38/99
+----------
+train Loss: 0.5386 Acc: 0.8316
+val Loss: 0.4180 Acc: 0.8113
+
+Epoch 39/99
+----------
+train Loss: 0.5416 Acc: 0.8326
+val Loss: 0.4290 Acc: 0.8013
+
+Epoch 40/99
+----------
+train Loss: 0.5285 Acc: 0.8375
+val Loss: 0.4360 Acc: 0.7947
+
+Epoch 41/99
+----------
+train Loss: 0.5512 Acc: 0.8267
+val Loss: 0.4140 Acc: 0.8113
+
+Epoch 42/99
+----------
+train Loss: 0.5393 Acc: 0.8367
+val Loss: 0.4068 Acc: 0.8063
+
+Epoch 43/99
+----------
+train Loss: 0.5506 Acc: 0.8269
+val Loss: 0.3901 Acc: 0.8146
+
+Epoch 44/99
+----------
+train Loss: 0.5526 Acc: 0.8289
+val Loss: 0.3755 Acc: 0.8195
+
+Epoch 45/99
+----------
+train Loss: 0.5407 Acc: 0.8316
+val Loss: 0.3910 Acc: 0.8079
+
+Epoch 46/99
+----------
+train Loss: 0.5481 Acc: 0.8306
+val Loss: 0.4374 Acc: 0.7980
+
+Epoch 47/99
+----------
+train Loss: 0.5412 Acc: 0.8306
+val Loss: 0.4127 Acc: 0.8129
+
+Epoch 48/99
+----------
+train Loss: 0.5294 Acc: 0.8348
+val Loss: 0.4079 Acc: 0.8146
+
+Epoch 49/99
+----------
+train Loss: 0.5353 Acc: 0.8352
+val Loss: 0.4431 Acc: 0.8013
+
+Epoch 50/99
+----------
+train Loss: 0.5315 Acc: 0.8373
+val Loss: 0.4753 Acc: 0.7914
+
+Epoch 51/99
+----------
+train Loss: 0.5499 Acc: 0.8271
+val Loss: 0.4361 Acc: 0.8113
+
+Epoch 52/99
+----------
+train Loss: 0.5376 Acc: 0.8295
+val Loss: 0.4265 Acc: 0.8013
+
+Epoch 53/99
+----------
+train Loss: 0.5209 Acc: 0.8393
+val Loss: 0.4376 Acc: 0.8096
+
+Epoch 54/99
+----------
+train Loss: 0.5352 Acc: 0.8360
+val Loss: 0.4270 Acc: 0.8079
+
+Epoch 55/99
+----------
+train Loss: 0.5241 Acc: 0.8379
+val Loss: 0.4234 Acc: 0.8030
+
+Epoch 56/99
+----------
+train Loss: 0.5158 Acc: 0.8375
+val Loss: 0.4677 Acc: 0.7980
+
+Epoch 57/99
+----------
+train Loss: 0.5326 Acc: 0.8308
+val Loss: 0.4812 Acc: 0.7947
+
+Epoch 58/99
+----------
+train Loss: 0.5283 Acc: 0.8362
+val Loss: 0.4523 Acc: 0.8063
+
+Epoch 59/99
+----------
+train Loss: 0.5355 Acc: 0.8346
+val Loss: 0.4698 Acc: 0.7930
+
+Epoch 60/99
+----------
+train Loss: 0.5349 Acc: 0.8373
+val Loss: 0.4307 Acc: 0.8146
+
+Epoch 61/99
+----------
+train Loss: 0.5280 Acc: 0.8350
+val Loss: 0.4299 Acc: 0.8063
+
+Epoch 62/99
+----------
+train Loss: 0.5310 Acc: 0.8358
+val Loss: 0.4722 Acc: 0.7947
+
+Epoch 63/99
+----------
+train Loss: 0.5249 Acc: 0.8393
+val Loss: 0.4794 Acc: 0.7997
+
+Epoch 64/99
+----------
+train Loss: 0.5296 Acc: 0.8409
+val Loss: 0.4177 Acc: 0.8096
+
+Epoch 65/99
+----------
+train Loss: 0.5053 Acc: 0.8466
+val Loss: 0.4471 Acc: 0.8079
+
+Epoch 66/99
+----------
+train Loss: 0.5239 Acc: 0.8389
+val Loss: 0.4352 Acc: 0.8063
+
+Epoch 67/99
+----------
+train Loss: 0.5216 Acc: 0.8405
+val Loss: 0.4196 Acc: 0.8146
+
+Epoch 68/99
+----------
+train Loss: 0.5221 Acc: 0.8409
+val Loss: 0.4668 Acc: 0.8063
+
+Epoch 69/99
+----------
+train Loss: 0.5218 Acc: 0.8411
+val Loss: 0.4316 Acc: 0.8096
+
+Epoch 70/99
+----------
+train Loss: 0.5288 Acc: 0.8397
+val Loss: 0.4579 Acc: 0.8030
+
+Epoch 71/99
+----------
+train Loss: 0.5161 Acc: 0.8387
+val Loss: 0.4071 Acc: 0.8146
+
+Epoch 72/99
+----------
+train Loss: 0.5220 Acc: 0.8397
+val Loss: 0.4152 Acc: 0.8179
+
+Epoch 73/99
+----------
+train Loss: 0.5218 Acc: 0.8407
+val Loss: 0.4228 Acc: 0.8146
+
+Epoch 74/99
+----------
+train Loss: 0.5254 Acc: 0.8395
+val Loss: 0.4573 Acc: 0.8146
+
+Epoch 75/99
+----------
+train Loss: 0.5234 Acc: 0.8413
+val Loss: 0.4883 Acc: 0.7980
+
+Epoch 76/99
+----------
+train Loss: 0.5296 Acc: 0.8362
+val Loss: 0.4644 Acc: 0.8079
+
+Epoch 77/99
+----------
+train Loss: 0.5199 Acc: 0.8387
+val Loss: 0.4412 Acc: 0.8113
+
+Epoch 78/99
+----------
+train Loss: 0.5182 Acc: 0.8385
+val Loss: 0.4154 Acc: 0.8113
+
+Epoch 79/99
+----------
+train Loss: 0.5134 Acc: 0.8411
+val Loss: 0.4059 Acc: 0.8096
+
+Epoch 80/99
+----------
+train Loss: 0.5146 Acc: 0.8427
+val Loss: 0.4381 Acc: 0.8113
+
+Epoch 81/99
+----------
+train Loss: 0.5275 Acc: 0.8369
+val Loss: 0.4514 Acc: 0.8013
+
+Epoch 82/99
+----------
+train Loss: 0.5057 Acc: 0.8450
+val Loss: 0.4624 Acc: 0.8046
+
+Epoch 83/99
+----------
+train Loss: 0.4926 Acc: 0.8454
+val Loss: 0.4377 Acc: 0.8063
+
+Epoch 84/99
+----------
+train Loss: 0.5165 Acc: 0.8430
+val Loss: 0.4705 Acc: 0.7980
+
+Epoch 85/99
+----------
+train Loss: 0.5116 Acc: 0.8434
+val Loss: 0.4266 Acc: 0.8179
+
+Epoch 86/99
+----------
+train Loss: 0.5081 Acc: 0.8403
+val Loss: 0.4427 Acc: 0.8129
+
+Epoch 87/99
+----------
+train Loss: 0.5086 Acc: 0.8409
+val Loss: 0.4188 Acc: 0.8146
+
+Epoch 88/99
+----------
+train Loss: 0.4969 Acc: 0.8499
+val Loss: 0.4065 Acc: 0.8179
+
+Epoch 89/99
+----------
+train Loss: 0.4934 Acc: 0.8464
+val Loss: 0.4293 Acc: 0.8013
+
+Epoch 90/99
+----------
+train Loss: 0.5015 Acc: 0.8444
+val Loss: 0.5008 Acc: 0.7881
+
+Epoch 91/99
+----------
+train Loss: 0.4958 Acc: 0.8438
+val Loss: 0.4324 Acc: 0.8179
+
+Epoch 92/99
+----------
+train Loss: 0.5009 Acc: 0.8466
+val Loss: 0.5216 Acc: 0.8030
+
+Epoch 93/99
+----------
+train Loss: 0.4962 Acc: 0.8466
+val Loss: 0.4478 Acc: 0.8096
+
+Epoch 94/99
+----------
+train Loss: 0.4940 Acc: 0.8503
+val Loss: 0.4858 Acc: 0.8079
+
+Epoch 95/99
+----------
+train Loss: 0.4949 Acc: 0.8458
+val Loss: 0.4866 Acc: 0.8113
+
+Epoch 96/99
+----------
+train Loss: 0.5236 Acc: 0.8411
+val Loss: 0.4607 Acc: 0.8030
+
+Epoch 97/99
+----------
+train Loss: 0.5056 Acc: 0.8436
+val Loss: 0.4800 Acc: 0.8013
+
+Epoch 98/99
+----------
+train Loss: 0.5140 Acc: 0.8405
+val Loss: 0.5375 Acc: 0.7930
+
+Epoch 99/99
+----------
+train Loss: 0.4891 Acc: 0.8507
+val Loss: 0.5142 Acc: 0.7881
+
+Training complete in 164m 40s
+Best val Acc: 0.829470

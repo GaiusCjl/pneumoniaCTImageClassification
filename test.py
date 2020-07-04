@@ -32,14 +32,21 @@ model_name = "inception"
 num_classes = 3
 
 # Batch size for training (change depending on how much memory you have)
-batch_size = 15
+batch_size = 16
 
 # Number of epochs to train for
-num_epochs = 50
+num_epochs = 100
+
+# 网络参数保存路径
+# model_dir = '/content/drive/My Drive/modelTestUploadGoogle/models/' + model_name + '_Adam_bs'+ str(batch_size) + '_ep150' + '.pkl'
+# model_save = '/content/drive/My Drive/modelTestUploadGoogle/models/' + model_name + '_Adam_bs16_ep150.pkl'
+# model_dir = '/content/drive/My Drive/modelTestUploadGoogle/models/inception_Adam_bs16_ep100.pkl'
+# model_save = '/content/drive/My Drive/modelTestUploadGoogle/models/inception_Adam_bs16_ep100.pkl'
+
 
 # Flag for feature extracting. When False, we finetune the whole model,
 #   when True we only update the reshaped layer params
-feature_extract = False 
+feature_extract = False
 
 def train_model(model, dataloaders, criterion, optimizer, num_epochs=25, is_inception=False):
     since = time.time()
@@ -48,6 +55,10 @@ def train_model(model, dataloaders, criterion, optimizer, num_epochs=25, is_ince
 
     best_model_wts = copy.deepcopy(model.state_dict())
     best_acc = 0.0
+
+    # 绘图需要
+    losses = {'train':[], 'val':[]}
+    accs = {'train':[], 'val':[]}
 
     for epoch in range(num_epochs):
         print('Epoch {}/{}'.format(epoch, num_epochs - 1))
@@ -103,6 +114,8 @@ def train_model(model, dataloaders, criterion, optimizer, num_epochs=25, is_ince
             epoch_acc = running_corrects.double() / len(dataloaders[phase].dataset)
 
             print('{} Loss: {:.4f} Acc: {:.4f}'.format(phase, epoch_loss, epoch_acc))
+            losses[phase].append(epoch_loss)
+            accs[phase].append(epoch_acc)
 
             # deep copy the model
             if phase == 'val' and epoch_acc > best_acc:
@@ -116,6 +129,24 @@ def train_model(model, dataloaders, criterion, optimizer, num_epochs=25, is_ince
     time_elapsed = time.time() - since
     print('Training complete in {:.0f}m {:.0f}s'.format(time_elapsed // 60, time_elapsed % 60))
     print('Best val Acc: {:4f}'.format(best_acc))
+
+    # 绘制曲线
+    x_loss = range(len(losses['train']))
+    plt.plot(x_loss, losses['train'], '-', label='train')
+    plt.plot(x_loss, losses['val'], '-', label='valid')
+    plt.xlabel('epoches')
+    plt.ylabel('loss')
+    plt.legend()
+    plt.savefig('/content/drive/My Drive/modelTestUploadGoogle/loss.png', dpi=1080)    
+    plt.show()
+    
+    plt.plot(x_loss, accs['train'], '-', label='train')
+    plt.plot(x_loss, accs['val'], '-', label='valid')
+    plt.xlabel('epoches')
+    plt.ylabel('acc')
+    plt.legend()
+    plt.savefig('/content/drive/My Drive/modelTestUploadGoogle/acc.png', dpi=1080)    
+    plt.show()
 
     # load best model weights
     model.load_state_dict(best_model_wts)
@@ -200,7 +231,12 @@ def initialize_model(model_name, num_classes, feature_extract, use_pretrained=Tr
 if __name__ == '__main__':
     # Initialize the model for this run
     model_ft, input_size = initialize_model(model_name, num_classes, feature_extract, use_pretrained=True)
-    
+    #加载预训练模型
+    if os.path.exists(model_dir):
+      model_ft = torch.load(model_dir)
+      print('load ', model_dir, ' model parameters.\n')
+
+
     # Print the model we just instantiated
     print(model_ft)
     
@@ -239,7 +275,7 @@ if __name__ == '__main__':
     #  doing feature extract method, we will only update the parameters
     #  that we have just initialized, i.e. the parameters with requires_grad
     #  is True.
-    params_to_update = model_ft.parameters()
+    params_to_update = model_ft.parameters() 
     print("Params to learn:")
     if feature_extract:
         params_to_update = []
@@ -253,11 +289,12 @@ if __name__ == '__main__':
                 print("\t",name)
     
     # Observe that all parameters are being optimized
-    optimizer_ft = optim.SGD(params_to_update, lr=0.0001, momentum=0.9)
+    # optimizer_ft = optim.SGD(params_to_update, lr=0.0001, momentum=0.9, weight_decay=1e-5)
+    optimizer_ft = optim.Adam(params_to_update, lr=0.001, betas=(0.9, 0.999), eps=1e-08, weight_decay=1e-4)
     
     # Setup the loss fxn
     criterion = nn.CrossEntropyLoss()
     
     # Train and evaluate
     model_ft, hist = train_model(model_ft, dataloaders_dict, criterion, optimizer_ft, num_epochs=num_epochs, is_inception=(model_name=="inception"))
-    
+    torch.save(model_ft, model_save)
